@@ -6,7 +6,11 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+  --tw-gradient-from: rgba(250, 145, 97, 1);
+  --tw-gradient-to: rgba(255, 129, 76, 1);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -16,12 +20,6 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
